@@ -32,3 +32,12 @@ func ExampleSubtract() {
 	fmt.Println(sum)
 	// Output: 4
 }
+
+func TestMultiply(t *testing.T) {
+	difference := Multiply(6, 3)
+	expected := 18
+
+	if difference != expected {
+		t.Errorf("expected '%d' but got '%d'", expected, difference)
+	}
+}
