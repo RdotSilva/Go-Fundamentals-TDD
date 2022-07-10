@@ -26,3 +26,9 @@ func TestSubtract(t *testing.T) {
 		t.Errorf("expected '%d' but got '%d'", expected, difference)
 	}
 }
+
+func ExampleSubtract() {
+	sum := Subtract(5, 1)
+	fmt.Println(sum)
+	// Output: 4
+}
