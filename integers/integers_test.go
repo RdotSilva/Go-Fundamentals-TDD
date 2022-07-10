@@ -17,3 +17,12 @@ func ExampleAdd() {
 	fmt.Println(sum)
 	// Output: 6
 }
+
+func TestSubtract(t *testing.T) {
+	difference := Subtract(4, 2)
+	expected := 2
+
+	if difference != expected {
+		t.Errorf("expected '%d' but got '%d'", expected, difference)
+	}
+}
