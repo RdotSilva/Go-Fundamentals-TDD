@@ -28,8 +28,8 @@ func TestSubtract(t *testing.T) {
 }
 
 func ExampleSubtract() {
-	sum := Subtract(5, 1)
-	fmt.Println(sum)
+	difference := Subtract(5, 1)
+	fmt.Println(difference)
 	// Output: 4
 }
 
@@ -40,4 +40,10 @@ func TestMultiply(t *testing.T) {
 	if difference != expected {
 		t.Errorf("expected '%d' but got '%d'", expected, difference)
 	}
+}
+
+func ExampleMultiply() {
+	product := Multiply(2, 5)
+	fmt.Println(product)
+	// Output: 10
 }
