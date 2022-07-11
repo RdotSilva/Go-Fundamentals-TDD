@@ -47,3 +47,12 @@ func ExampleMultiply() {
 	fmt.Println(product)
 	// Output: 10
 }
+
+func TestDivide (t *testing.T) {
+	quotient := Divide(18, 3)
+	expected := 6
+
+	if quotient != expected {
+		t.Errorf("expected '%d' but got '%d'", expected, quotient)
+	}
+}
