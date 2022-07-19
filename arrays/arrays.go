@@ -9,6 +9,7 @@ func Sum(numbers []int) int {
 	return sum
 }
 
+// Calculate the the sum of every slice passed in
 func SumAll(numbersToSum ...[]int) []int {
 	var sums []int
 	for _, numbers := range numbersToSum {
@@ -18,11 +19,16 @@ func SumAll(numbersToSum ...[]int) []int {
 	return sums
 }
 
+// Calculates the sum of all but the first number given a collection of slices
 func SumAllTails(numbersToSum ...[]int) []int {
 	var sums []int
 	for _, numbers := range numbersToSum {
-		tail := numbers[1:]
-		sums = append(sums, Sum(tail))
+		if len(numbers) == 0 {
+			sums = append(sums, 0)
+		} else {
+			tail := numbers[1:]
+			sums = append(sums, Sum(tail))
+		}
 	}
 
 	return sums
