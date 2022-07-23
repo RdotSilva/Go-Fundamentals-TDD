@@ -1,5 +1,7 @@
 package structs
 
+import "math"
+
 // Rectangle has the dimensions of a rectangle.
 type Rectangle struct {
 	Width  float64
@@ -7,7 +9,7 @@ type Rectangle struct {
 }
 
 func (r Rectangle) Area() float64 {
-	return 0
+	return r.Width * r.Height
 }
 
 type Circle struct {
@@ -15,7 +17,7 @@ type Circle struct {
 }
 
 func (c Circle) Area() float64 {
-	return 0
+	return math.Pi * c.Radius * c.Radius
 }
 
 // Calculate the perimeter of a square/rectangle
