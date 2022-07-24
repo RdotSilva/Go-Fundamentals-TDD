@@ -2,6 +2,10 @@ package structs
 
 import "math"
 
+type Shape interface {
+	Area() float64
+}
+
 // Rectangle has the dimensions of a rectangle.
 type Rectangle struct {
 	Width  float64
